@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #fff5f5;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container {
+  text-align: center;
+  background-color: #ffebee;
+  padding: 40px;
+  border-radius: 20px;
+  border: 3px solid #ff6b81;
+  box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+  max-width: 1000px;
+  width: 90%;
+  max-height: 1000px;
+}
+
+.header_text {
+  font-size: 36px;
+  color: #ff6b81;
+  margin-top: 20px;
+  animation: fadeInText 2s ease forwards;
+}
+
+.bitches-container img {
+  opacity: 0;
+  transform: scale(0.5) rotate(-30deg);
+  animation: bounceIn 1.5s ease-out forwards, bounceCats 2s ease infinite alternate;
+  animation-delay: 0s, 1.5s;
+  animation-fill-mode: forwards;
+}
+
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gif_container img {
+  border-radius: 10px;
+  animation: fadeInText 2s ease forwards, bounceCats 2s ease infinite alternate;
+  animation-delay: 0s, 1.5s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceCats {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+#footer{
+  position: fixed;
+  bottom: 2px;
+  place-self: center;
+  color: #ff6b81;
+}
